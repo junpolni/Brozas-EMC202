@@ -1,4 +1,4 @@
-#ALLOGENE CLASSES (so far)
+# ALLOGENE CLASSES (so far)
 
 GEO users
   - uses any form of earth to create constructs or projectiles for attacking
