@@ -7,6 +7,13 @@ public class Novice
     protected float _experience;
     protected string _name;
     protected float _health;
+    protected int _vitality;
+    protected int _agility;
+    protected int _power;
+
+    public float MaxHealth => _health + (_vitality * 3);
+
+    public int Level => (int)(_experience / 1000);
 
     public string Name
     {
