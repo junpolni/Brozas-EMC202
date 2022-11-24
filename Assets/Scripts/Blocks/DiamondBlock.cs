@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DiamondBlock : Block
 {
-    private void Start()
+    public override void IntroduceYourself()
     {
-        IntroduceYourself();
+        base.IntroduceYourself();
+        Debug.Log($"I am a Diamond Block.");
     }
 }

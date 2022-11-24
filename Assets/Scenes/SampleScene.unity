@@ -216,7 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820490399}
-  - component: {fileID: 820490398}
+  - component: {fileID: 820490400}
   m_Layer: 0
   m_Name: BlockMain
   m_TagString: Untagged
@@ -224,21 +224,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &820490398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820490397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe7756257b6fe64880b6c28c0fd3401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: Block
-  _hitPoints: 1
-  _color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &820490399
 Transform:
   m_ObjectHideFlags: 0
@@ -254,6 +239,21 @@ Transform:
   m_Father: {fileID: 1916017063}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820490400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820490397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe7756257b6fe64880b6c28c0fd3401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Block
+  _hitPoints: 1
+  _color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1231616454
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,8 +299,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Iron
-  _hitPoints: 5
+  _hitPoints: 3
   _color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!1 &1492407337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492407339}
+  - component: {fileID: 1492407338}
+  m_Layer: 0
+  m_Name: Class Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1492407338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492407337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb9dd09811ae245adc02ad6536868b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1492407339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492407337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787900818
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1787900820}
-  - component: {fileID: 1787900819}
+  - component: {fileID: 1787900821}
   m_Layer: 0
   m_Name: DiamondBlock
   m_TagString: Untagged
@@ -318,21 +362,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1787900819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787900818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78c4cca6edb2ec24893b358bd1fade45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: Diamond
-  _hitPoints: 6
-  _color: {r: 0.080678225, g: 1, b: 0, a: 0}
 --- !u!4 &1787900820
 Transform:
   m_ObjectHideFlags: 0
@@ -348,6 +377,21 @@ Transform:
   m_Father: {fileID: 1916017063}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1787900821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787900818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c4cca6edb2ec24893b358bd1fade45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Diamond
+  _hitPoints: 2
+  _color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1916017061
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,27 +401,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916017063}
-  - component: {fileID: 1916017062}
+  - component: {fileID: 1916017064}
   m_Layer: 0
   m_Name: BlockManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1916017062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916017061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ee3a09b50154fc4fa40b673c31a58d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Diamond: {fileID: 1787900819}
+  m_IsActive: 0
 --- !u!4 &1916017063
 Transform:
   m_ObjectHideFlags: 0
@@ -396,3 +427,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1916017064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916017061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee3a09b50154fc4fa40b673c31a58d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blocks:
+  - {fileID: 820490400}
+  - {fileID: 1787900821}
+  - {fileID: 1231616456}

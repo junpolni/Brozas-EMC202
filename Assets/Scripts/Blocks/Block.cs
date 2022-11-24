@@ -9,7 +9,7 @@ public class Block : MonoBehaviour
 
     [SerializeField] private Color _color;
 
-    public virutal void IntroduceYourself()
+    public virtual void IntroduceYourself()
     {
         Debug.Log($"Hello I am {_name}, I have {_hitPoints} Health, With Color {_color}");
     }
