@@ -10,7 +10,6 @@ public class AllogenesClassManager : MonoBehaviour
         var electro = new ElectroUser();
         Debug.Log(electro.GetProperties());
         electro.AscensionStats();
-        
 
         var geo = new GeoUser();
         Debug.Log(geo.GetProperties());

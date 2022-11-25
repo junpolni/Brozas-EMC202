@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ElectroUser : Allogene
 {
+
     public override string GetProperties()
     {
         var properties = 
