@@ -11,24 +11,20 @@ public class Allogene
     protected int _baseDefense;
     protected float _baseAttack;
 
-    protected float _addnlHealth;
-    protected float _addnlAttack;
-    protected int _addnlDefense;
-    protected int  _addnlEnergy;
+    protected int _foodHealthPoints;
+    protected int _foodAttackPoints;
+    protected int _enemyAtk;
 
-    public float MaxHealth => _baseHealth + (_addnlHealth * 2);
+    public float FoodRegen => MaxHealth + (_foodHealthPoints * 2);
+    public float DamageTaken => CurrentDef - _enemyAtk;
+    public float FoodAtkBuff => CurrentAtk + (_foodAttackPoints * 0.5f);
 
-    public float CurrentAtk => _baseAttack + _addnlAttack;
-
-    public int CurrentDef => _baseDefense + _addnlDefense;
-
-    public int CurrentEnergy => _baseEnergy + _addnlEnergy;
-
-    public string Name
-    {
-        get => _name;
-        set => _name = string.IsNullOrEmpty(value) ? "Yae Miko" : value;
-    }
+    public string Name {get => _name; set => _name = string.IsNullOrEmpty(value) ? "yae miko" : value; }
+    public string ElementName {get => _elementName; set => _elementName = string.IsNullOrEmpty(value) ? "electro" : value; }
+    public float MaxHealth { get => _baseHealth; set => _baseHealth = value; }
+    public float CurrentAtk { get => _baseAttack; set => _baseAttack = value; }
+    public int CurrentDef { get => _baseDefense; set => _baseDefense = value; }
+    public int CurrentEnergy { get => _baseEnergy; set => _baseEnergy = value; }
 
     public Allogene()
     {
@@ -40,7 +36,18 @@ public class Allogene
         _baseDefense = 10;
     }
 
-    public Allogene(string name, string elementName, float baseHealth, float baseAttack, int baseEnergy, int baseDefense)
+    public virtual void AllogeneStats()
+    {
+        _name = Name;
+        _elementName = ElementName;
+        _baseHealth = MaxHealth;
+        _baseAttack = CurrentAtk;
+        _baseEnergy = CurrentDef;
+        _baseDefense = CurrentDef;
+
+    }
+    
+    /*public Allogene(string name, string elementName, float baseHealth, float baseAttack, int baseEnergy, int baseDefense)
     {
         _name = name;
         _elementName = elementName;
@@ -48,24 +55,28 @@ public class Allogene
         _baseAttack = baseAttack;
         _baseEnergy = baseEnergy;
         _baseDefense = baseDefense;
+    } */
+
+    public virtual void EnemyDamage() // damage taken from enemy
+    {
+        _enemyAtk = 50;
+        Debug.Log($"{Name} has taken damage from a Slime | -{_enemyAtk} HP |");
     }
 
-    public virtual string GetProperties()
+    public virtual void FoodBuff() // health and atk buff 
     {
-        var properties = 
-            $"{nameof(_name)}:{_name}, {nameof(_elementName)}:{_elementName}, {nameof(_baseHealth)}:{_baseHealth}, {nameof(_baseAttack)}:{_baseAttack}, {nameof(_baseEnergy)}:{_baseEnergy}, {nameof(_baseDefense)}:{_baseDefense}";
+        _foodHealthPoints = 10;
+        _foodAttackPoints = 20;
 
-        return properties;
+        Debug.Log($"{Name} ate Sweet Madame. | +{_foodHealthPoints} HP |");
+        Debug.Log($"{Name} ate Adeptus' Temptation. | +{_foodAttackPoints} ATK |");
     }
 
-    public virtual void AscensionStats()
+    public virtual void CurrentStats() // shows current stats
     {
-        Debug.Log($"HELLO");
-    }
-
-    public virtual void FoodBuff()
-    {
-
+        CurrentAtk = FoodAtkBuff;
+        MaxHealth = DamageTaken + FoodRegen;
+        Debug.Log($"Name: {Name} | Element: {ElementName} | HP: {MaxHealth} | ATK: {CurrentAtk} | DEF: {CurrentDef} | ER: {CurrentEnergy}");
     }
     
 }

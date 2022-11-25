@@ -8,14 +8,23 @@ public class AllogenesClassManager : MonoBehaviour
     void Start()
     {
         var electro = new ElectroUser();
-        Debug.Log(electro.GetProperties());
-        electro.AscensionStats();
-
-        var geo = new GeoUser();
-        Debug.Log(geo.GetProperties());
+        electro.AllogeneStats();
+        electro.EnemyDamage();
+        electro.FoodBuff();
+        electro.CurrentStats();
+        
+        //var geo = new GeoUser();
+        /* geo.AllogeneStats();
+        geo.EnemyDamage();
+        geo.FoodBuff();
+        geo.CurrentStats();
 
         var hydro = new HydroUser();
-        Debug.Log(hydro.GetProperties());
+        hydro.AllogeneStats();
+        hydro.FoodBuff();
+        hydro.EnemyDamage();
+        hydro.CurrentStats(); */
+        
     }
 
     // Update is called once per frame
